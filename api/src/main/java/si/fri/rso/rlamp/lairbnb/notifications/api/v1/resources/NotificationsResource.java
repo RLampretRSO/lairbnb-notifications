@@ -1,9 +1,9 @@
 package si.fri.rso.rlamp.lairbnb.notifications.api.v1.resources;
 
-import org.glassfish.jersey.process.internal.RequestScoped;
 import si.fri.rso.rlamp.lairbnb.notifications.services.NotificationService;
 
 import javax.annotation.PostConstruct;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -24,10 +24,10 @@ public class NotificationsResource {
                               @QueryParam("addr") String emailAddress,
                               @QueryParam("name") String name,
                               @QueryParam("id")   Integer id) {
-        if (type == "welcome") {
+        if (type.equals("welcome")) {
             notificationBean.sendWelcomeMessage(emailAddress, name);
         }
-        else if (type == "reservation") {
+        else if (type.equals("reservation")) {
             notificationBean.sendReservaitonConformation(emailAddress, id);
         }
         else {

@@ -1,6 +1,6 @@
 package si.fri.rso.rlamp.lairbnb.notifications.services;
 
-import org.glassfish.jersey.process.internal.RequestScoped;
+import javax.enterprise.context.RequestScoped;
 
 @RequestScoped
 public class NotificationService {
