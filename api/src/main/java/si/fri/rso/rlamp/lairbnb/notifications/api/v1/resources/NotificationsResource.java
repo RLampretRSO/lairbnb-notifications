@@ -1,5 +1,6 @@
 package si.fri.rso.rlamp.lairbnb.notifications.api.v1.resources;
 
+import com.kumuluz.ee.logs.cdi.Log;
 import si.fri.rso.rlamp.lairbnb.notifications.services.NotificationService;
 
 import javax.annotation.PostConstruct;
@@ -9,6 +10,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+@Log
 @RequestScoped
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
