@@ -17,6 +17,8 @@ spec:
             value: bluemix
           - name: KUMULUZEE_DISCOVERY_ETCD_HOSTS
             value: http://etcd:2379
+          - name: KUMULUZEE_SERVER_BASEURL
+            value: http://168.1.149.132:31158
         ports:
         - containerPort: 8083
           name: server
