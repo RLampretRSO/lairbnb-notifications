@@ -3,4 +3,4 @@ services:
   lairbnb-notifications:
     image: rlamp/lairbnb-notifications
     ports:
-      - 8084:8084
+      - 8083:8083
